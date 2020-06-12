@@ -4,18 +4,12 @@ with open('filename.txt', 'r') as file: # do something
 
 variable 'file' is assigned a file object (iterable)
 
-'r' - open for reading (default)
-
-'w' - open for writing, truncating the file first
-
-'x' - open for exclusive creation, failing if the file already exists
-
-'a' - open for writing, appending to the end of the file if it exists
-
-'b' - binary mode
-
-'t' - text mode (default)
-
+'r' - open for reading (default)  
+'w' - open for writing, truncating the file first  
+'x' - open for exclusive creation, failing if the file already exists  
+'a' - open for writing, appending to the end of the file if it exists  
+'b' - binary mode  
+'t' - text mode (default)  
 '+' - open for updating (reading and writing)
 
 ## FILE OBJECT METHODS:
