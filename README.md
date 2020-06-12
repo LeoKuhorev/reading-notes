@@ -4,7 +4,7 @@
 [Class 04 - Linked Lists](./class_04.md)  
 [Class 05 - ](./class_05.md)  
 [Class 06 - ](./class_06.md)  
-[Class 07 - ](./class_07.md) 
+[Class 07 - ](./class_07.md)  
 [Class 08 - ](./class_08.md)  
 [Class 09 - ](./class_09.md)  
 [Class 10 - ](./class_10.md)  
