@@ -1,33 +1,28 @@
-## RANDOM
+## LINKED LISTS
 
-### To generate a random integer in a given range:
+_**Linked List**_- A data structure that contains nodes that links/points to the next node in the list.
 
-Method 1 - using randint():
+**_Singly_** - Singly refers to the number of references the node has. A Singly linked list means that there is only one reference, and the reference points to the Next node in a linked list.
 
-    import random
-    print random.randint(0, 5)
+**_Doubly_** - Doubly refers to there being two (double) references within the node. A Doubly linked list means that there is a reference to both the Next and Previous node
 
-Method 2 - using multiplication:
+**_Node_** - Nodes are the individual items/links that live in a linked list. Each node contains the data for each link.
 
-    import random
-    random.random() * 100
+**_Next_** - Each node contains a property called Next. This property contains the reference to the next node.
+Head - The Head is a reference type of type Node to the first node in a linked list.
 
-### Get random value from a list:
+**_Current_** - The Current reference is a reference type of type Node that is currently being looked at. This node is traditionally used when traversing through a full linked list. When traversing, you typically reset the current to the head to guarantee you are starting from the beginning of the linked list.
 
-    random.choice( ['red', 'black', 'green'] )
+The fundamental difference between _arrays_ and _linked lists_ is that arrays are static data structures, while linked lists are dynamic data structures (A static data structure needs all of its resources to be allocated when the structure is created)
 
-### Shuffle elements in a list (in place):
+<img src="./assets/ll_memory.jpeg" style="width:80%">
 
-    from random import shuffle
-    x = [[i] for i in range(10)]
-    shuffle(x)
+## Complexities
 
-### Generate a randomly selected element from range(start, stop, step)
-
-    random.randrange(start, stop[, step])
-
-    import random
-    for i in range(3):
-        print random.randrange(0, 101, 5)
+| Data Structure     | Access | Search | Insertion | Deletion |
+| ------------------ | ------ | ------ | --------- | -------- |
+| Array              | Θ(1)   | Θ(n)   | Θ(n)      | Θ(n)     |
+| Singly-Linked List | Θ(n)   | Θ(n)   | Θ(1)      | Θ(1)     |
+| Doubly-Linked List | Θ(n)   | Θ(n)   | Θ(1)      | Θ(1)     |
 
 [Go back](./README.md)
