@@ -9,6 +9,14 @@ DIR can be appended to the PATH, bu easier just to refer to it using relative or
 
 'from path/to/the/dir/module_name import function_name, function2_name' etc
 
+Run as a script:
+
+    python -m game_of_greed.game
+
+Run as a module:
+
+    PYTHONPATH=‘.’ python game_of_greed/game.py
+
 ## PYTEST:
 
 In it's most basic form the workflow is:
