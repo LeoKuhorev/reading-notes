@@ -6,7 +6,7 @@
 [Class 06 - Random](./class_06.md)  
 [Class 07 - Scope, Closures](./class_07.md)  
 [Class 08 - List Comprehensions, Decorators](./class_08.md)  
-[Class 09 - ](./class_09.md)  
+[Class 09 - Dunder Methods, Intro to Statistic](./class_09.md)  
 [Class 10 - ](./class_10.md)  
 [Class 11 - ](./class_11.md)  
 [Class 12 - ](./class_12.md)  
