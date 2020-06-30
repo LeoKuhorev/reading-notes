@@ -69,4 +69,12 @@ A _**queue**_ is a data structure that consists of Nodes. Each Node references t
     def is_empty(self):
         return self.front == None
 
+## INTRO TO DATA SCIENCE
+
+_**Data Science**_ is basically trying to make sense of data by identifying patterns, applying algorithms to extract information and predict future actions that are suitable for a specific situation.
+
+Data --> Data Analytics --> Data Visualization --> Information
+
+When the machine tries to identify patterns in data after rigorous training and testing and there upon gives us desired results - this is _**Machine Learning**_. Whenever there is situation when the machine needs to make decisions on its own where judgment is involved, it is called _**Artificial Intelligence**_.
+
 [Go back](./README.md)
