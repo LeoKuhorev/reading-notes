@@ -72,7 +72,36 @@ More complex filters:
     filt = df['LanguageWorkedWith'].str.contains('Python', na=False)
     df.loc[filt]
 
+#### Updating Data in Rows and Columns
 
+`df.columns = ['Column1Name', 'Column2Name']` - change name of all columns;  
+`df.columns = [x.upper() for x in df.colums]` - bring all column names to uppercase;  
+`df.columns = df.columns.str.replace(' ', '_')` - replace spaces with underscores in cilumn names;  
+`df.rename(columns={'old_name': 'new_name', 'old_name_2': 'new_name_2'}, inplace=True)` - rename only specific columns;  
+
+`df.loc[2] = ['first_value', 'second_value', 'third_value']` - select a row and set its content;  
+`df.loc[2, ['column_name_1', 'column_name_2']] = ['new_value_1', 'new_value_2']` - select row and specific columns and set new values;  
+`df.loc[2, 'column_name'] = 'new_value'` - change a single value;  
+`df.at[2, 'column_name'] = 'new_value'` - change a single value;  
+`df['column_name'] = df['column_name'].str.lower()` - bring all valued in column to lowercase;  
+
+##### Apply (can be applied on `series` and `df`):
+`df['column_name'].apply(len)` - returns length of each value in column (instead of `len` can be any function);  
+`df['column_name'].apply(lambda x: x.lower())` - bring all values to lowercase (won't modify the data in place); 
+ 
+If run on DF will apply function to each column/row:
+`df.apply(len, axis='columns')` - returns length of each column in DF;  
+`df.apply(pd.Series.min)` or `df.apply(labmda x: x.min())`- returns min value for each column in DF;  
+
+##### ApplyMap (works only on DF):
+`df.applymap(len)` - will return DF with the `len` method applied to each element;  
+`df.applymap(str.lower)` - bring the entire DF to lowercase;  
+
+##### Map (works only on series):
+`df['column_name'].map({'old_value': 'new_value', 'old_value': 'new_value'})` - substitutes the old values with the given ones (the values that we didn't change will be converted to NaN);  
+
+##### Replace(works only on series):
+`df['column_name'].replace({'old_value': 'new_value', 'old_value': 'new_value'})` - substitutes the old values with the given ones (the values that we didn't change will stay the same);
 
 
 
