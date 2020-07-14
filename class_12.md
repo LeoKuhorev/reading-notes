@@ -44,7 +44,7 @@ This is how the data is stored in Pandas (keys - colums, values - rows)
 #### General Methods
 `df.info()` - returns rows, columns and data type; 
 `df.head(10)`, `df.tail(15)` - display number of first/last rows (default value - 5); 
-`df.value_counts()` - returns count;  
+`df.value_counts()` - returns count of unique values in provide series;  
 `df.set_index('columnName')` - set a column to be used as index (can have 2nd parameter `inplace=True` if you need df to be modified);  
 `de.reset_index(inplace=True)` - reset the index;  
 `df.sort_index()` - sort df by index column (takes an optional parameter `ascending=False` for reversed order);  
