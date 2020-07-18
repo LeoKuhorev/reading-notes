@@ -12,7 +12,7 @@
 [Class 12 - Pandas](./class_12.md)  
 [Class 13 - Linear Regression](./class_13.md)  
 [Class 14 - Data Vizualization](./class_14.md)  
-[Class 15 - ](./class_15.md)  
+[Class 15 - Machine Learning Intro](./class_15.md)  
 [Class 16 - ](./class_16.md)  
 [Class 17 - ](./class_17.md)  
 [Class 18 - ](./class_18.md)
