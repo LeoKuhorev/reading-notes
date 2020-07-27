@@ -17,6 +17,7 @@
 
   - Pre-order: root >> left >> right
 
+
         ALGORITHM preOrder(root)
         // INPUT <-- root node
         // OUTPUT <-- pre-order output of tree node's values
@@ -29,7 +30,7 @@
             if root.right is not NULL
                 preOrder(root.right)
 
-  - In-order: left >> root >> right
+- In-order: left >> root >> right
 
 
         ALGORITHM inOrder(root)
@@ -44,19 +45,19 @@
             if root.right is not NULL
                 inOrder(root.right)
 
-- Post-order: left >> right >> root
+    - Post-order: left >> right >> root
 
-        ALGORITHM postOrder(root)
-        // INPUT <-- root node
-        // OUTPUT <-- post-order output of tree node's values
+      ALGORITHM postOrder(root)
+      // INPUT <-- root node
+      // OUTPUT <-- post-order output of tree node's values
 
-            if root.left is not NULL
-                postOrder(root.left)
+          if root.left is not NULL
+              postOrder(root.left)
 
-            if root.right is not NULL
-                postOrder(root.right)
+          if root.right is not NULL
+              postOrder(root.right)
 
-            OUTPUT <-- root.value
+          OUTPUT <-- root.value
 
 - Breadth First
 

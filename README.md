@@ -15,4 +15,4 @@
 [Class 15 - Machine Learning Intro](./class_15.md)  
 [Class 16 - Trees](./class_16.md)  
 [Class 17 - Web Scraping](./class_17.md)  
-[Class 18 - ](./class_18.md)
+[Class 18 - Cryptography](./class_18.md)
