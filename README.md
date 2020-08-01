@@ -16,3 +16,4 @@
 [Class 16 - Trees](./class_16.md)  
 [Class 17 - Web Scraping](./class_17.md)  
 [Class 18 - Cryptography](./class_18.md)
+[Class 19 - Automation, RegEx, Selenium](./class_19.md)
