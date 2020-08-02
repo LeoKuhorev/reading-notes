@@ -6,6 +6,8 @@
 [Selenium with Python](https://selenium-python.readthedocs.io/) - provides a simple API to write functional/acceptance tests using Selenium WebDriver. Through Selenium Python API you can access all functionalities of Selenium WebDriver in an intuitive way;  
 [Watchdog](https://pythonhosted.org/watchdog/) - Python API library and shell utilities to monitor file system events.
 
+[shutil](https://pymotw.com/3/shutil/) module includes high-level file operations such as copying and archiving.
+
 ### ReGex
 
 Using `r` prefix makes the string raw (will be interpreted as-is)
@@ -88,8 +90,9 @@ _The `match()` function checks for a match only at the beginning of the string (
 `subn(pattern, repl, string, count=0)` - returns a tuple containing the new string value and the number of replacements that were performed in the statement;  
 `split(string, [maxsplit = 0])` - Splits the strings wherever the pattern matches and returns a list. If the optional argument maxsplit is nonzero, then the maximum 'maxsplit' number of splits are performed;
 
-`IGNORECASE (I)` - Allows case-insensitive matches;
-`DOTALL (S)` - Allows . to match any character, including newline;
-`MULTILINE (M)` - Allows start of string (^) and end of string (\$) anchor to match newlines as well;
-`VERBOSE (X)` - Allows you to write whitespace and comments within a regular expression to make it more readable;  
+`IGNORECASE (I)` - Allows case-insensitive matches;  
+`DOTALL (S)` - Allows . to match any character, including newline;  
+`MULTILINE (M)` - Allows start of string (^) and end of string (\$) anchor to match newlines as well;  
+`VERBOSE (X)` - Allows you to write whitespace and comments within a regular expression to make it more readable;
+
 [Go back](./README.md)
