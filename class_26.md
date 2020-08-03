@@ -7,7 +7,7 @@
 - Templates (jinja2)
 - Forms (by default any model can be used as a form)
 - Built-in auth with groups and permissions, easy to implement 2FA
-- Built-in customizible admin page
+- Built-in customizable admin page
 - Support for internationalization
 - Advanced security features
 
