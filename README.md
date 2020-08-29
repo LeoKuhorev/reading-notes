@@ -17,4 +17,6 @@
 [Class 17 - Web Scraping](./class_17.md)  
 [Class 18 - Cryptography](./class_18.md)  
 [Class 19 - Automation, RegEx, Selenium](./class_19.md)  
-[Class 26 - Intro to Django](./class_26.md)
+[Class 26 - Intro to Django](./class_26.md)  
+[Class 27 - Django Models](./class_27.md)
+[Class 28 - Django Forms](./class_28.md)
