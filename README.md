@@ -21,3 +21,6 @@
 [Class 27 - Django Models](./class_27.md)  
 [Class 28 - Django Forms](./class_28.md)  
 [Class 29 - Django Custom User Model](./class_29.md)
+[Class 30 - Hash Table](./class_30.md)
+[Class 31 - DRF, Docker](./class_31.md)  
+[Class 32 - DRF Permissions](./class_32.md)
