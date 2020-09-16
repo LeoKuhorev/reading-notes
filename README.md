@@ -23,4 +23,5 @@
 [Class 29 - Django Custom User Model](./class_29.md)
 [Class 30 - Hash Table](./class_30.md)
 [Class 31 - DRF, Docker](./class_31.md)  
-[Class 32 - DRF Permissions](./class_32.md)
+[Class 32 - DRF Permissions](./class_32.md)  
+[Class 33 - JWT Token Intro](./class_33.md)
