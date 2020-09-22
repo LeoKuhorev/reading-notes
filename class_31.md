@@ -1,28 +1,59 @@
-## Hash Table
+## Docker Intro
 
-### Terminology
+Docker _**image**_ is a snapshot in time of what a project contains.  
+A _**container**_ is a running instance of the image.  
+_**docker-compose.yml**_ - is a list of container instructions.
 
-_Hash_ - A hash is the result of some algorithm taking an incoming string and converting it into a value that could be used for either security or some other purpose. In the case of a hashtable, it is used to determine the index of the array.  
-_Buckets_ - A bucket is what is contained in each index of the array of the hashtable. Each index is a bucket. An index could potentially contain multiple key/value pairs if a collision occurs.  
-_Collisions_ - A collision is what happens when more than one key gets hashed to the same location of the hashtable.
+- `docker --version` - check Docker version;
+- `docker-compose --version` - check Docker-compose version;
+- `docker info` - get info about Docker;
+- `docker image ls` - inspect current image;
+- `docker container ls -la` - inspect current container;
+- `docker image build .` - build the image;
+- `docker-compose up --build` - build the image and run the container;
 
-### Internal Methods
+### Dockerfile
 
-`Add()`
-When adding a new key/value pair to a hashtable:
+_**Dockerfile**_ contains all the requirements for the container (analogue of Pipenv).
+Dockerfiles are read from top-to-bottom. The first instruction must be the `FROM` command which lets us import a base image to use for our image. This base image could be another Docker image or one we create entirely from scratch.
 
-send the key to the GetHash method.
-Once you determine the index of where it should be placed, go to that index
-Check if something exists at that index already, if it doesn’t, add it with the key/value pair.
-If something does exist, add the new key/value pair to the data structure within that bucket.
+    # Dockerfile
+    FROM python:3.7-alpine
 
-`Find()`
-The Find takes in a key, gets the Hash, and goes to the index location specified. Once at the index location is found in the array, it is then the responsibility of the algorithm the iterate through the bucket and see if the key exists and return the value.
+## DRF
 
-`Contains()`
-The Contains method will accept a key, and return a bool on if that key exists inside the hashtable. The best way to do this is to have the contains call the GetHash and check the hashtable if the key exists in the table given the index returned.
+- create a new app
+- install DRF
+- configure project-level and app-level urls.py
 
-`GetHash()`
-The GetHash will accept a key as a string, conduct the hash, and then return the index of the array where the key/value should be placed.
+        from django.urls import path
+        from .views import BookAPIView
+
+        urlpatterns = [
+            path('', BookAPIView.as_view()),
+        ]
+
+- configure views.py
+
+        from rest_framework import generics
+
+        from books.models import Book
+        from .serializers import BookSerializer
+
+
+        class BookAPIView(generics.ListAPIView):
+            queryset = Book.objects.all()
+            serializer_class = BookSerializer
+
+- create serializers.py
+  from rest_framework import serializers
+
+        from books.models import Book
+
+
+        class BookSerializer(serializers.ModelSerializer):
+            class Meta:
+                model = Book
+                fields = ('title', 'subtitle', 'author', 'isbn')
 
 [Go back](./README.md)
