@@ -26,4 +26,5 @@
 [Class 32 - DRF Permissions](./class_32.md)  
 [Class 33 - JWT Token Intro](./class_33.md)  
 [Class 34 - API Deployment](./class_34.md)
-[Class 36 - DSA Review](./class_36.md)
+[Class 36 - DSA Review](./class_36.md)  
+[Class 37 - Graphs](./class_37.md)
