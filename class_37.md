@@ -11,43 +11,75 @@ _**Degree**_ - The degree of a vertex is the number of edges connected to that v
 
 An _**Undirected**_ Graph is a graph where each edge is undirected or bi-directional. This means that the undirected graph does not move in any direction.
 
-<img src="./assets/undirected_graph.png" style="max-width: 70%"/>
+<div style="text-align: center">
+    <img src="./assets/undirected_graph.png" style="max-width: 50%"/>
+</div>
 
 A _**Directed**_ Graph also called a _**Digraph**_ is a graph where every edge is directed.Unlike an undirected graph, a Digraph has direction. Each node is directed at another node with a specific requirement of what node should be referenced next.
-<img src="./assets/directed_graph.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/directed_graph.png" style="max-width: 50%"/>
+</div>
 
 A _**Complete Graph**_ is when all nodes are connected to all other nodes.
-<img src="./assets/complete_graph.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/complete_graph.png" style="max-width: 50%"/>
+</div>
 
 A _**connected graph**_ is graph that has all of vertices/nodes have at least one edge.
-<img src="./assets/connected_graph.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/connected_graph.png" style="max-width: 50%"/>
+</div>
 
 A _**disconnected graph**_ is a graph where some vertices may not have edges.
-<img src="./assets/disconnected_graph.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/disconnected_graph.png" style="max-width: 50%"/>
+</div>
 
 An _**acyclic graph**_ is a directed graph without cycles. A _**cycle**_ is when a node can be traversed through and potentially end up back at itself.
-<img src="./assets/acyclic.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/acyclic.png" style="max-width: 50%"/>
+</div>
 
 A _**cyclic graph**_ is a graph that has cycles. A cycle is defined as a path of a positive length that starts and ends at the same vertex.
 
 ### Graph Representation
 
 An _**adjacency matrix**_ is represented through a 2-dimensional array. If there are n vertices, then we are looking at an n x n Boolean matrix. Each Row and column represents each vertex of the data structure. The elements of both the column and the row must add up to 1 if there is an edge that connects the two, or zero if there isn’t a connection. A _**sparse**_ graph is when there are very few connections, a _**dense**_ graph is when there are many connections
-<img src="./assets/adjacency_matrix.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/adjacency_matrix.png" style="max-width: 50%"/>
+</div>
 
 An _**adjacency list**_ is the most common way to represent graphs. An adjacency list is a collection of linked lists or array that lists all of the other vertices that are connected. Adjacency lists make it easy to view if one vertices connects to another.
-<img src="./assets/adjacency_list.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/adjacency_list.png" style="max-width: 50%"/>
+</div>
 
 ### Weighted Graphs
 
 A _**weighted graph**_ is a graph with numbers assigned to its edges. These numbers are called weights. This is what a weighted graph looks like:
-<img src="./assets/weighted_graph.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/weighted_graph.png" style="max-width: 50%"/>
+</div>
 
 When representing a weighted graph in a matrix, you set the element in the 2D array to represent the actual weight between the two paths. If there is not a connection between the two vertices, you can put a 0, although it is known for some people to put the infinity sign instead.
-<img src="./assets/weight_matrix.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/weight_matrix.png" style="max-width: 50%"/>
+</div>
 
 Within adjacency lists, you must include both the weight and the name of the adjacent vertex.
-<img src="./assets/weight_list.png" style="max-width: 70%"/>
+
+<div style="text-align: center">
+    <img src="./assets/weight_list.png" style="max-width: 50%"/>
+</div>
 
 ### Traversals
 
