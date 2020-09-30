@@ -1,118 +1,377 @@
-## Graphs
+## React Intro
 
-A _**graph**_ is a non-linear data structure that can be looked at as a collection of _**vertices**_ (or _**nodes**_) potentially connected by line segments named _**edges**_.
+### ES6 overview
 
-### Terminology
+The arrow function expression syntax is a shorter way of creating a function expression. Arrow functions do not have their own this, do not have prototypes, cannot be used for constructors, and should not be used as object methods.
 
-_**Vertex**_ - A vertex, also called a “node”, is a data object that can have zero or more adjacent vertices.  
-_**Edge**_ - An edge is a connection between two nodes.  
-_**Neighbor**_ - The neighbors of a node are its adjacent nodes, i.e., are connected via an edge.  
-_**Degree**_ - The degree of a vertex is the number of edges connected to that vertex.
+ES6 introduces a shorter notation for assigning properties to variables of the same name.
 
-An _**Undirected**_ Graph is a graph where each edge is undirected or bi-directional. This means that the undirected graph does not move in any direction.
+    #ES5
+    var obj = {
+        a: a,
+        b: b,
+    }
 
-<div style="text-align: center">
-    <img src="./assets/undirected_graph.png" style="max-width: 50%"/>
-</div>
+    # ES6
+    let obj = {
+        a,
+        b,
+    }
 
-A _**Directed**_ Graph also called a _**Digraph**_ is a graph where every edge is directed.Unlike an undirected graph, a Digraph has direction. Each node is directed at another node with a specific requirement of what node should be referenced next.
+The function keyword can be omitted when assigning methods on an object.
 
-<div style="text-align: center">
-    <img src="./assets/directed_graph.png" style="max-width: 50%"/>
-</div>
+    #ES5
+    var obj = {
+        a: function (c, d) {},
+        b: function (e, f) {},
+    }
 
-A _**Complete Graph**_ is when all nodes are connected to all other nodes.
+    #ES6
+    let obj = {
+        a(c, d) {},
+        b(e, f) {},
+    }
 
-<div style="text-align: center">
-    <img src="./assets/complete_graph.png" style="max-width: 50%"/>
-</div>
+Destructuring (object matching)
 
-A _**connected graph**_ is graph that has all of vertices/nodes have at least one edge.
+    var obj = {a: 1, b: 2, c: 3}
 
-<div style="text-align: center">
-    <img src="./assets/connected_graph.png" style="max-width: 50%"/>
-</div>
+    #ES5
+    var a = obj.a
+    var b = obj.b
+    var c = obj.c
 
-A _**disconnected graph**_ is a graph where some vertices may not have edges.
+    #ES6
+    let {a, b, c} = obj
 
-<div style="text-align: center">
-    <img src="./assets/disconnected_graph.png" style="max-width: 50%"/>
-</div>
+Array iteration (looping)
+var arr = ['a', 'b', 'c']
 
-An _**acyclic graph**_ is a directed graph without cycles. A _**cycle**_ is when a node can be traversed through and potentially end up back at itself.
+    #ES5
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
 
-<div style="text-align: center">
-    <img src="./assets/acyclic.png" style="max-width: 50%"/>
-</div>
+    #ES6
+    for (let i of arr) {
+        console.log(i)
+    }
 
-A _**cyclic graph**_ is a graph that has cycles. A cycle is defined as a path of a positive length that starts and ends at the same vertex.
+Default parameters
 
-### Graph Representation
+    #ES5
+    var func = function (a, b) {
+        b = b === undefined ? 2 : b
+        return a + b
+    }
 
-An _**adjacency matrix**_ is represented through a 2-dimensional array. If there are n vertices, then we are looking at an n x n Boolean matrix. Each Row and column represents each vertex of the data structure. The elements of both the column and the row must add up to 1 if there is an edge that connects the two, or zero if there isn’t a connection. A _**sparse**_ graph is when there are very few connections, a _**dense**_ graph is when there are many connections
+    #ES6
+    let func = (a, b = 2) => {
+        return a + b
+    }
 
-<div style="text-align: center">
-    <img src="./assets/adjacency_matrix.png" style="max-width: 50%"/>
-</div>
+Spread syntax
 
-An _**adjacency list**_ is the most common way to represent graphs. An adjacency list is a collection of linked lists or array that lists all of the other vertices that are connected. Adjacency lists make it easy to view if one vertices connects to another.
+    #ES6
+    let arr1 = [1, 2, 3]
+    let func = (a, b, c) => a + b + c
 
-<div style="text-align: center">
-    <img src="./assets/adjacency_list.png" style="max-width: 50%"/>
-</div>
+    console.log(func(...arr1)) // 6
 
-### Weighted Graphs
+Classes/constructor functions
 
-A _**weighted graph**_ is a graph with numbers assigned to its edges. These numbers are called weights. This is what a weighted graph looks like:
+    #ES5
+    function Func(a, b) {
+        this.a = a
+        this.b = b
+    }
 
-<div style="text-align: center">
-    <img src="./assets/weighted_graph.png" style="max-width: 50%"/>
-</div>
+    Func.prototype.getSum = function () {
+        return this.a + this.b
+    }
 
-When representing a weighted graph in a matrix, you set the element in the 2D array to represent the actual weight between the two paths. If there is not a connection between the two vertices, you can put a 0, although it is known for some people to put the infinity sign instead.
 
-<div style="text-align: center">
-    <img src="./assets/weight_matrix.png" style="max-width: 50%"/>
-</div>
+    #ES6
+    class Func {
+        constructor(a, b) {
+            this.a = a
+            this.b = b
+        }
 
-Within adjacency lists, you must include both the weight and the name of the adjacent vertex.
+        getSum() {
+            return this.a + this.b
+        }
+    }
 
-<div style="text-align: center">
-    <img src="./assets/weight_list.png" style="max-width: 50%"/>
-</div>
+Inheritance
 
-### Traversals
+    #ES6
+    class Inheritance extends Func {
+        constructor(a, b, c) {
+            super(a, b)
 
-#### Breadth First:
+            this.c = c
+        }
 
-- Enqueue the declared start node into the Queue.
-- Create a loop that will run while the node still has nodes present.
-- Dequeue the first node from the queue
-- if the Dequeue‘d node has unvisited child nodes, mark the unvisited children as visited and re-insert them back into the queue.
+        getProduct() {
+            return this.a * this.b * this.c
+        }
+    }
 
-        ALGORITHM BreadthFirst(vertex)
-        DECLARE nodes <-- new List()
-        DECLARE breadth <-- new Queue()
-        breadth.Enqueue(vertex)
+Modules - export/import
 
-        while (breadth is not empty)
-        DECLARE front <-- breadth.Dequeue()
-        nodes.Add(front)
+    #index.html
+    <script src="export.js"></script>
+    <script type="module" src="import.js"></script>
 
-                for each child in front.Children
-                    if(child is not visited)
-                        child.Visited <-- true
-                        breadth.Enqueue(child)
+    #export.js
+    let func = (a) => a + a
+    let obj = {}
+    let x = 0
+    export {func, obj, x}
 
-        return nodes;
+    #import.js
+    import {func, obj, x} from './export.js'
+    console.log(func(3), obj, x)
 
-#### Depth First
+Promises/Callbacks
 
-- Push the root node into the stack
-- Start a while loop while the stack is not empty
-- Peek at the top node in the stack
-- If the top node has unvisited children, mark the top node as visited, and then Push any unvisited children back into the stack.
-- If the top node does not have any unvisited children, - Pop that node off the stack
-- repeat until the stack is empty.
+    let doSecond = () => {
+        console.log('Do second.')
+    }
+
+    let doFirst = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Do first.')
+
+            resolve()
+        }, 500)
+    })
+
+    doFirst.then(doSecond)
+
+### React
+
+**!All React components must act like pure functions with respect to their props.**
+
+The smallest React element
+
+    ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('root')
+    );
+
+### JSX
+
+You can put any valid JavaScript expression inside the curly braces in JSX.
+
+    const name = 'Josh Perez';
+    const element = <h1>Hello, {name}</h1>;
+
+    ReactDOM.render(
+    element,
+    document.getElementById('root')
+    );
+
+**Specifying Attributes with JSX**
+
+_Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names. For example, class becomes className in JSX, and tabindex becomes tabIndex._
+
+    const element = <div tabIndex="0"></div>;
+    const element = <img src={user.avatarUrl}></img>;
+
+If a tag is empty, you may close it immediately with />, JSX tags may contain children:
+
+    const element = <img src={user.avatarUrl} />;
+    const element = (
+    <div>
+        <h1>Hello!</h1>
+        <h2>Good to see you here.</h2>
+    </div>
+    );
+
+### React Components
+
+Conceptually, **_components_** are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React **_elements_** describing what should appear on the screen.
+
+Simple function-based component
+
+    function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+        }
+
+    const element = <Welcome name="Sara" />;
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
+    );
+
+**Composing Components**
+
+    function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+    }
+
+    function App() {
+        return (
+            <div>
+            <Welcome name="Sara" />
+            <Welcome name="Cahal" />
+            <Welcome name="Edite" />
+            </div>
+        );
+    }
+
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+    );
+
+**Converting function-based component into class-based:**
+
+- Create an ES6 class, with the same name, that extends React.Component.
+- Add a single empty method to it called render().
+- Move the body of the function into the render() method.
+- Replace props with this.props in the render() body.
+- Delete the remaining empty function declaration.
+
+        class Clock extends React.Component {
+            render() {
+                return (
+                <div>
+                    <h1>Hello, world!</h1>
+                    <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+                </div>
+                );
+            }
+        }
+
+### State
+
+    class Clock extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {date: new Date()};
+        }
+
+        render() {
+            return (
+            <div>
+                <h1>Hello, world!</h1>
+                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+            );
+        }
+    }
+
+        ReactDOM.render(
+        <Clock />,
+        document.getElementById('root')
+    );
+
+### Lifecycle
+
+In applications with many components, it’s very important to free up resources taken by the components when they are destroyed. We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called **_“mounting”_** in React. We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called **_“unmounting”_** in React.
+
+The `componentDidMount()` method runs after the component output has been rendered to the DOM. This is a good place to set up a timer:
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+We will tear down the timer in the `componentWillUnmount()` lifecycle method:
+componentWillUnmount() {
+clearInterval(this.timerID);
+}
+
+### How to use state
+
+Do Not Modify State Directly
+For example, this will not re-render a component:
+
+    // Wrong
+    this.state.comment = 'Hello';
+
+    // Correct
+    this.setState({comment: 'Hello'});
+
+Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
+
+    // Wrong
+    this.setState({
+        counter: this.state.counter + this.props.increment,
+    });
+
+    // Correct
+    this.setState((state, props) => ({
+        counter: state.counter + props.increment
+    }));
+
+    // Correct
+    this.setState(function(state, props) {
+        return {
+            counter: state.counter + props.increment
+        };
+    });
+
+### Handling Events
+    <button onClick={activateLasers}>
+        Activate Lasers
+    </button>
+
+When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. For example, this Toggle component renders a button that lets the user toggle between “ON” and “OFF” states:
+
+    class Toggle extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {isToggleOn: true};
+
+            // This binding is necessary to make `this` work in the callback
+            this.handleClick = this.handleClick.bind(this);
+        }
+
+        handleClick() {
+            this.setState(state => ({
+            isToggleOn: !state.isToggleOn
+            }));
+        }
+
+        render() {
+            return (
+            <button onClick={this.handleClick}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+            );
+        }
+    }
+
+    ReactDOM.render(
+        <Toggle />,
+        document.getElementById('root')
+    );
+
+To make sure that `this` is bound you can use arrow function syntax
+    class LoggingButton extends React.Component {
+        handleClick() {
+            console.log('this is:', this);
+        }
+
+        render() {
+            // This syntax ensures `this` is bound within handleClick
+            return (
+            <button onClick={() => this.handleClick()}>
+                Click me
+            </button>
+            );
+        }
+    }
+
+### Passing Arguments to Event Handlers
+
+    <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
+    <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
 
 [Go back](./README.md)
