@@ -8,4 +8,4 @@ Big Theta (asymptotically tight bound) - the function will take exactly that muc
 Nice big O cheat sheet for different algorithms:
 https://www.bigocheatsheet.com/
 
-[Go back](./README.md)
+[Go back](../README.md)

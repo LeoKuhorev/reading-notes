@@ -39,4 +39,4 @@ In it's most basic form the workflow is:
 
 Can always be replaced with iterative solution, but is much easier to read in some examples (tree traversing etc).
 
-[Go back](./README.md)
+[Go back](../README.md)

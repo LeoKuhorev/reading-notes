@@ -24,4 +24,4 @@
 `python manage.py shell` - run interactive shell;  
 `python manage.py runserver` - run web server (by default runs on 8080, can be started on any provided port)
 
-[Go back](./README.md)
+[Go back](../README.md)

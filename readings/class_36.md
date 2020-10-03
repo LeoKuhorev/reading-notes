@@ -115,4 +115,4 @@ Within adjacency lists, you must include both the weight and the name of the adj
 - If the top node does not have any unvisited children, - Pop that node off the stack
 - repeat until the stack is empty.
 
-[Go back](./README.md)
+[Go back](../README.md)

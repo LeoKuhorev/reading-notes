@@ -25,4 +25,4 @@ The Contains method will accept a key, and return a bool on if that key exists i
 `GetHash()`
 The GetHash will accept a key as a string, conduct the hash, and then return the index of the array where the key/value should be placed.
 
-[Go back](./README.md)
+[Go back](../README.md)

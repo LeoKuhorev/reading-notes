@@ -84,4 +84,4 @@ Use of closures in standart pythin library:
     square = partial(power, 2)
     square(10) # 100
 
-[Go back](./README.md)
+[Go back](../README.md)

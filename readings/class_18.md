@@ -12,4 +12,4 @@ When encrypting, a person looks up each letter of the message in the "plain" lin
         Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
         Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
 
-[Go back](./README.md)
+[Go back](../README.md)

@@ -25,4 +25,4 @@ The fundamental difference between _arrays_ and _linked lists_ is that arrays ar
 | Singly-Linked List | Θ(n)   | Θ(n)   | Θ(1)      | Θ(1)     |
 | Doubly-Linked List | Θ(n)   | Θ(n)   | Θ(1)      | Θ(1)     |
 
-[Go back](./README.md)
+[Go back](../README.md)

@@ -56,4 +56,4 @@ Dockerfiles are read from top-to-bottom. The first instruction must be the `FROM
                 model = Book
                 fields = ('title', 'subtitle', 'author', 'isbn')
 
-[Go back](./README.md)
+[Go back](../README.md)

@@ -45,4 +45,4 @@ Once the project grows bigger settings.py can be split into multiple files
     from .third_party import *  # Celery, Django REST Framework & other 3rd parties
     from .project import *      # You custom settings
 
-[Go back](./README.md)
+[Go back](../README.md)

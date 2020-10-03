@@ -65,4 +65,4 @@
 
         return render(request, 'catalog/book_renew_librarian.html', context)
 
-[Go back](./README.md)
+[Go back](../README.md)

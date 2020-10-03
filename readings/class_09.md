@@ -68,4 +68,4 @@ _**The Three Sigma**_ rule dictates that given a normal distribution, 68% of you
 
 <div style="text-align: center"><img src="./assets/three_sigma_rule.png" style="max-width: 70%"></div>
 
-[Go back](./README.md)
+[Go back](../README.md)

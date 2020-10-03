@@ -318,6 +318,7 @@ Because `this.props` and `this.state` may be updated asynchronously, you should 
     });
 
 ### Handling Events
+
     <button onClick={activateLasers}>
         Activate Lasers
     </button>
@@ -354,10 +355,10 @@ When you define a component using an ES6 class, a common pattern is for an event
     );
 
 To make sure that `this` is bound you can use arrow function syntax
-    class LoggingButton extends React.Component {
-        handleClick() {
-            console.log('this is:', this);
-        }
+class LoggingButton extends React.Component {
+handleClick() {
+console.log('this is:', this);
+}
 
         render() {
             // This syntax ensures `this` is bound within handleClick
@@ -374,4 +375,4 @@ To make sure that `this` is bound you can use arrow function syntax
     <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
     <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
 
-[Go back](./README.md)
+[Go back](../README.md)

@@ -30,4 +30,4 @@ Method 2 - using multiplication:
     for i in range(3):
         print random.randrange(0, 101, 5)
 
-[Go back](./README.md)
+[Go back](../README.md)

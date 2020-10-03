@@ -50,4 +50,4 @@ Raising an exception:
 `else: # if the Exception isn't caught run this part`  
 `finally: # run this part no matter what (e.g. close file etc)`
 
-[Go back](./README.md)
+[Go back](../README.md)

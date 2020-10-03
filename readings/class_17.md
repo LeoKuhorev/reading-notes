@@ -28,4 +28,4 @@ _**Web scraping**_, _**web harvesting**_, or _**web data extraction**_ is data s
         # add 1 for next line
         line_count += 1
 
-[Go back](./README.md)
+[Go back](../README.md)

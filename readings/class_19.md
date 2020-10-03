@@ -95,4 +95,4 @@ _The `match()` function checks for a match only at the beginning of the string (
 `MULTILINE (M)` - Allows start of string (^) and end of string (\$) anchor to match newlines as well;  
 `VERBOSE (X)` - Allows you to write whitespace and comments within a regular expression to make it more readable;
 
-[Go back](./README.md)
+[Go back](../README.md)

@@ -14,4 +14,4 @@
 - If you're stuck - ask the interviewer about a hint
 - Test your solution with the given input, make sure the output matches
 
-  [Go back](./README.md)
+  [Go back](../README.md)

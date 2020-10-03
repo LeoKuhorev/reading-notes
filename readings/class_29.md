@@ -83,4 +83,4 @@ At the same time you need to extend AppConfig class with the ready() function:
     def ready(self):
         import users.signals
 
-[Go back](./README.md)
+[Go back](../README.md)

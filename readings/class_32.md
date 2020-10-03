@@ -58,4 +58,4 @@ Before running the main body of the view each permission in the list is checked.
 
 `IsAuthenticatedOrReadOnly` - will allow authenticated users to perform any request. Requests for unauthorized users will only be permitted if the request method is one of the "safe" methods; GET, HEAD or OPTIONS.
 
-[Go back](./README.md)
+[Go back](../README.md)
