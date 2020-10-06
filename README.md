@@ -29,4 +29,5 @@
 [Class 35 - DSA Review](./readings/class_35.md)  
 [Class 36 - Graphs](./readings/class_36.md)  
 [Class 37 - React Intro](./readings/class_37.md)  
-[Class 37 - React Part II](./readings/class_38.md)  
+[Class 38 - React Part II](./readings/class_38.md)  
+[Class 39 - React Part III](./readings/class_39.md)
