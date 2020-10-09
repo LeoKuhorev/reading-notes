@@ -31,4 +31,4 @@
 [Class 37 - React Intro](./readings/class_37.md)  
 [Class 38 - React Part II](./readings/class_38.md)  
 [Class 39 - React Part III](./readings/class_39.md)  
-[Class 40 - Security](./readings/class_40.md)
+[Class 41 - Security](./readings/class_41.md)
