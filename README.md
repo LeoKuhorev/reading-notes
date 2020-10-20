@@ -34,3 +34,4 @@
 [Class 41 - Security](./readings/class_41.md)  
 [Class 42 - Tying it all together](./readings/class_42.md)  
 [Class 43 - Pythonisms](./readings/class_43.md)  
+[Class 44 - SASS](./readings/class_44.md)  
