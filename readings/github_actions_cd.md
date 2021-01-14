@@ -62,7 +62,7 @@ Host github.com
 [Credits for this step](https://www.youtube.com/watch?v=gW1TDirJ5E4&ab_channel=omgneering)
 
 - in the root of your repo create a new dir .github/workflows
-- create your_workflow_name.yml
+- navigate into this folder and create your_workflow_name.yml
 - <a name="action"></a>sample configuration:
 
 ```
