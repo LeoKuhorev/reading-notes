@@ -40,9 +40,8 @@ Host github.com
 
 ### Generate new private key and add it to the repo
 
-- on your local machine generate new ssh key by running:
-  `ssh-keygen -m PEM -t rsa -b 4096 -C "key_name"`
-- navigate to `/home/<user>/.ssh`
+- on your local machine navigate to `/home/<user>/.ssh`
+- generate new ssh key by running: `ssh-keygen -m PEM -t rsa -b 4096 -C "key_name"`
 - copy the content of the **private** key `cat key_name`
 - open your GH repo settings, and navigate to secrets -> new repository secret
 - create the name (will be used in the configuration code <a href="#action">below</a>), and paste the content of the **private** key
