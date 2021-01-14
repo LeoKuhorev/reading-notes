@@ -6,9 +6,9 @@
 
 - on your server navigate to `/home/<user>/.ssh`
 - run `ssh-keygen -m PEM -t rsa -b 4096 -C "key_name"` to generate a new ssh key pair
-- copy the contents of the **public** key `cat key_name.pub`
+- copy the content of the **public** key `cat key_name.pub`
 - open your GH repo settings, and navigate to deploy keys -> add deploy key
-- create a meaningful title and paste the contents of your server **public** key
+- create a meaningful title and paste the content of your server **public** key
 - if you're not going to push code from your server you might leave 'allow write access' unchecked
 
 **_We might have multiple repos on the server, so it's a good idea to configure what keys should be used for each of them:_**
@@ -43,18 +43,18 @@ Host github.com
 - on your local machine generate new ssh key by running:
   `ssh-keygen -m PEM -t rsa -b 4096 -C "key_name"`
 - navigate to `/home/<user>/.ssh`
-- copy the contents of the **private** key `cat key_name`
+- copy the content of the **private** key `cat key_name`
 - open your GH repo settings, and navigate to secrets -> new repository secret
-- create the name (will be used in the configuration code <a href="#action">below</a>), and paste the contents of the **private** key
+- create the name (will be used in the configuration code <a href="#action">below</a>), and paste the content of the **private** key
 
 **_Then we will need to:_**
 
 ### Add public key to the server
 
 - on local machine navigate to `/home/<user>/.ssh`
-- on local machine copy the contents of the **public** key `cat key_name.pub`
+- on local machine copy the content of the **public** key `cat key_name.pub`
 - on server navigate to `/home/<user>/.ssh`
-- on server run `nano authorized_keys` and paste the contents of your **public** key
+- on server run `nano authorized_keys` and paste the content of your **public** key
 - this might require server ssh service restart `sudo systemctl restart sshd`
 
 **_Once everything is set up we can finally create out github action that will ssh to our server, pull all new changes and apply all the necessary steps to deploy our new build:_**
