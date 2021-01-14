@@ -36,7 +36,7 @@ Host github.com
   - open your repo on GH and copy the ssh link to it
   - run `git remote set-url origin git@github.com:<org_name>/<repo_name>.git`
 
-**_That's it, you can try to run `git pull` now to see if it works. <br> The next step will be allowing our GH repo to establish SSH connection with the server. To do so we will need to:_**
+**_That's it, you can now run `git pull` to see if this works. <br> The next step will be allowing our GH repo to establish SSH connection with the server. To do so we will need to:_**
 
 ### Generate new private key and add it to the repo
 
